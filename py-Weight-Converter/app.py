@@ -1,4 +1,4 @@
-from WeightConversion import WeightConverter
+from classes.WeightConversion import WeightConverter
 
 # Main program ran on script execution
 if __name__ == "__main__":
