@@ -1,2 +1,2 @@
 # 🐍 My Python projects
-- ## 🖥️ [(Terminal) - ⚖️ Weight Converter](https://github.com/gombert-j/Python/tree/main/py-Weight-Converter)
+- ## 🖥️ [(Terminal) - ⚖️ Weight Converter](https://github.com/junegombert/Python/tree/main/py-Weight-Converter)
