@@ -6,6 +6,19 @@ class WeightConverter:
     self._init_weight_dicts()
 
 
+# Handles weight conversion by calling the necessary sub-methods
+  def prepare_weight_conversion(self) -> None:
+    print("======= WEIGHT TO CONVERT ========")
+    weight_to_convert = self._prepare_weight_object()
+
+    print("======= CONVERTED WEIGHT ========")
+    output_unit = self._input_user_weight_unit()
+    output_value = self._convert(weight_to_convert.value, weight_to_convert.unit, output_unit)
+
+    converted_weight = WeightObject(output_value, output_unit, self._weight_dict)
+    print(f"====== RESULTS ========\n{converted_weight}")
+
+
   # Conversion dictionary of different weight units
   def _init_weight_dicts(self) -> None:
     self._weight_dict = {
@@ -95,16 +108,3 @@ class WeightConverter:
   # Converts a weight from one unit to another
   def _convert(self, input_value : float, input_unit : float, output_unit : float) -> float:
     return float(input_value) * (input_unit / output_unit)
-
-
-# Handles weight conversion by calling the necessary sub-methods
-  def prepare_weight_conversion(self) -> None:
-    print("======= WEIGHT TO CONVERT ========")
-    weight_to_convert = self._prepare_weight_object()
-
-    print("======= CONVERTED WEIGHT ========")
-    output_unit = self._input_user_weight_unit()
-    output_value = self._convert(weight_to_convert.value, weight_to_convert.unit, output_unit)
-
-    converted_weight = WeightObject(output_value, output_unit, self._weight_dict)
-    print(f"====== RESULTS ========\n{converted_weight}")
